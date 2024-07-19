@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+</head>
+<body>
+    <header>
+        <h1>Regex Quiz</h1>
+    </header>
+    <main>
+        <div id="rules-container">
+            <h2 id="quiz-rule-head">Quiz Rules</h2>
+            <ul>
+                <li>Assessment: This assessment will consist of 10 questions.</li>
+                <li>Scoring: Each correct answer will be awarded 10 points.</li>
+                <li>Incorrect Answers: No points will be awarded for incorrect answers.</li>
+                <li>Hint Usage: If a hint is used and the answer is subsequently correct, 5 points will be awarded.</li>
+            </ul>
+            <button id="start-quiz">Start Quiz</button>
+        </div>
+        <div id="quiz-container" style="display: none;">
+            <div id="question-container">
+                <p id="question-number"></p>
+                <p id="question-text"></p>
+                <input type="text" id="answer-input" placeholder="Enter your regex">
+                <button id="submit-answer">Submit</button>
+                <button id="hint-button"><i class="fas fa-lightbulb"></i></button>
+                <p id="response"></p>
+            </div>
+        </div>
+        <div id="results-container" style="display: none;">
+            <h3 id="results-text">Results</h3>
+            <ul id="results-list"></ul>
+            <p id="score"></p>
+            <button id="play-again">Play Again</button>
+        </div>
+        <div id="quiz-completed-container" style="display: none;">
+            <p id="quiz-completed-message">Quiz Completed!</p>
+            <button id="show-results">Results</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

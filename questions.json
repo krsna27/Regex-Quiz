@@ -1,0 +1,454 @@
+{
+  "questions": [
+      {
+          "category": "easy",
+          "question": "What is the regex to match any single character?",
+          "testCases": [
+              {"input": "a", "output": true},
+              {"input": "1", "output": true},
+              {"input": "!", "output": true}
+          ],
+          "hint": "Think of the wildcard character."
+      },
+      {
+          "category": "easy",
+          "question": "How to match digits in regex?",
+          "testCases": [
+              {"input": "123", "output": true},
+              {"input": "abc", "output": false},
+              {"input": "1a2", "output": true}
+          ],
+          "hint": "Digits range from 0 to 9."
+      },
+      {
+          "category": "easy",
+          "question": "What is the regex for matching uppercase letters?",
+          "testCases": [
+              {"input": "ABC", "output": true},
+              {"input": "abc", "output": false},
+              {"input": "AbC", "output": true}
+          ],
+          "hint": "Only uppercase letters."
+      },
+      {
+          "category": "easy",
+          "question": "How to match whitespace characters in regex?",
+          "testCases": [
+              {"input": " ", "output": true},
+              {"input": "\t", "output": true},
+              {"input": "a", "output": false}
+          ],
+          "hint": "Spaces, tabs, and line breaks."
+      },
+      {
+          "category": "easy",
+          "question": "How to match a word boundary in regex?",
+          "testCases": [
+              {"input": "word boundary", "output": true},
+              {"input": "wordboundary", "output": false},
+              {"input": " boundary", "output": true}
+          ],
+          "hint": "Boundary between a word character and a non-word character."
+      },
+      {
+          "category": "easy",
+          "question": "How to match non-digits in regex?",
+          "testCases": [
+              {"input": "abc", "output": true},
+              {"input": "123", "output": false},
+              {"input": "a1b", "output": true}
+          ],
+          "hint": "Matches any character that is not a digit."
+      },
+      {
+          "category": "easy",
+          "question": "How to match a specific word in regex?",
+          "testCases": [
+              {"input": "word", "output": true},
+              {"input": "notword", "output": false},
+              {"input": "a word", "output": true}
+          ],
+          "hint": "Exact match for the word 'word'."
+      },
+      {
+          "category": "easy",
+          "question": "How to match the start of a line in regex?",
+          "testCases": [
+              {"input": "start", "output": true},
+              {"input": " not start", "output": false},
+              {"input": "start of line", "output": true}
+          ],
+          "hint": "Matches the beginning of a string or line."
+      },
+      {
+          "category": "easy",
+          "question": "How to match the end of a line in regex?",
+          "testCases": [
+              {"input": "end", "output": true},
+              {"input": "not end ", "output": false},
+              {"input": "end of line", "output": true}
+          ],
+          "hint": "Matches the end of a string or line."
+      },
+      {
+          "category": "easy",
+          "question": "How to match a specific number of repetitions in regex?",
+          "testCases": [
+              {"input": "aaa", "output": true},
+              {"input": "aa", "output": false},
+              {"input": "aaaa", "output": true}
+          ],
+          "hint": "Matches exactly 3 repetitions of the preceding element."
+      },
+      {
+          "category": "medium",
+          "question": "How to match a valid email address?",
+          "testCases": [
+              {"input": "example@example.com", "output": true},
+              {"input": "example@.com", "output": false},
+              {"input": "example@example", "output": false}
+          ],
+          "hint": "Requires an '@' symbol and a valid domain."
+      },
+      {
+          "category": "medium",
+          "question": "How to match a URL?",
+          "testCases": [
+              {"input": "http://example.com", "output": true},
+              {"input": "https://example.com", "output": true},
+              {"input": "example.com", "output": false}
+          ],
+          "hint": "Starts with http:// or https://."
+      },
+      {
+          "category": "medium",
+          "question": "How to match phone numbers in US format?",
+          "testCases": [
+              {"input": "(123) 456-7890", "output": true},
+              {"input": "123-456-7890", "output": true},
+              {"input": "1234567890", "output": false}
+          ],
+          "hint": "Follows the pattern XXX-XXX-XXXX or (XXX) XXX-XXXX."
+      },
+      {
+          "category": "medium",
+          "question": "How to match a date in YYYY-MM-DD format?",
+          "testCases": [
+              {"input": "2020-01-01", "output": true},
+              {"input": "01-01-2020", "output": false},
+              {"input": "2020/01/01", "output": false}
+          ],
+          "hint": "Year, month, and day separated by hyphens."
+      },
+      {
+          "category": "medium",
+          "question": "How to match HTML tags?",
+          "testCases": [
+              {"input": "<div>content</div>", "output": true},
+              {"input": "<div>content</div", "output": false},
+              {"input": "<div>content", "output": false}
+          ],
+          "hint": "Matches opening and closing HTML tags."
+      },
+      {
+          "category": "medium",
+          "question": "How to match a credit card number (any type)?",
+          "testCases": [
+              {"input": "1234-5678-1234-5678", "output": true},
+              {"input": "1234567812345678", "output": true},
+              {"input": "1234 5678 1234 5678", "output": true}
+          ],
+          "hint": "Matches typical credit card number formats."
+      },
+      {
+          "category": "medium",
+          "question": "How to match a hexadecimal color code?",
+          "testCases": [
+              {"input": "#FFFFFF", "output": true},
+              {"input": "#FFF", "output": true},
+              {"input": "FFF", "output": false}
+          ],
+          "hint": "Matches colors like #RRGGBB or #RGB."
+      },
+      {
+          "category": "medium",
+          "question": "How to match time in 24-hour format (HH:MM)?",
+          "testCases": [
+              {"input": "23:59", "output": true},
+              {"input": "12:30", "output": true},
+              {"input": "24:00", "output": false}
+          ],
+          "hint": "Matches hours and minutes separated by a colon."
+      },
+      {
+          "category": "medium",
+          "question": "How to match a valid username (alphanumeric with underscores, 3-16 characters)?",
+          "testCases": [
+              {"input": "user_123", "output": true},
+              {"input": "us", "output": false},
+              {"input": "username_is_too_long", "output": false}
+          ],
+          "hint": "Matches usernames with letters, numbers, and underscores."
+      },
+      {
+          "category": "medium",
+          "question": "How to match a valid credit card expiration date (MM/YYYY)?",
+          "testCases": [
+              {"input": "01/2024", "output": true},
+              {"input": "1/2024", "output": false},
+              {"input": "01/24", "output": false}
+          ],
+          "hint": "Matches the format of a credit card expiration date."
+      },
+      {
+          "category": "medium",
+          "question": "How to match a valid North American phone number?",
+          "testCases": [
+              {"input": "+1 (123) 456-7890", "output": true},
+              {"input": "123-456-7890", "output": true},
+              {"input": "1234567890", "output": false}
+          ],
+          "hint": "Matches US and Canadian phone numbers."
+      },
+      {
+          "category": "medium",
+          "question": "How to match a valid time in 12-hour format (hh:mm am/pm)?",
+          "testCases": [
+              {"input": "12:30 PM", "output": true},
+              {"input": "12:30", "output": true},
+              {"input": "12:30 AM", "output": true}
+          ],
+          "hint": "Matches hours, minutes, and optional am/pm format."
+      },
+      {
+          "category": "hard",
+          "question": "How to match all words that start with a vowel?",
+          "testCases": [
+              {"input": "apple orange", "output": true},
+              {"input": "banana apple", "output": false},
+              {"input": "umbrella elephant", "output": true}
+          ],
+          "hint": "Words starting with A, E, I, O, U."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string with exactly three consecutive digits?",
+          "testCases": [
+              {"input": "123", "output": true},
+              {"input": "1234", "output": false},
+              {"input": "abc123def", "output": true}
+          ],
+          "hint": "Matches three digits in a row."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that starts and ends with the same character?",
+          "testCases": [
+              {"input": "abca", "output": true},
+              {"input": "abcd", "output": false},
+              {"input": "aa", "output": true}
+          ],
+          "hint": "First and last characters are the same."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a word that contains at least one repeated letter?",
+          "testCases": [
+              {"input": "letter", "output": true},
+              {"input": "word", "output": false},
+              {"input": "book", "output": true}
+          ],
+          "hint": "Letters appear more than once."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a valid IPv4 address?",
+          "testCases": [
+              {"input": "192.168.0.1", "output": true},
+              {"input": "255.255.255.255", "output": true},
+              {"input": "999.999.999.999", "output": false}
+          ],
+          "hint": "Matches IP addresses with four octets."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that contains only alphanumeric characters?",
+          "testCases": [
+              {"input": "abc123", "output": true},
+              {"input": "abc-123", "output": false},
+              {"input": "123456", "output": true}
+          ],
+          "hint": "Letters and digits only."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that does not contain any digits?",
+          "testCases": [
+              {"input": "abc", "output": true},
+              {"input": "123", "output": false},
+              {"input": "abc123", "output": false}
+          ],
+          "hint": "No digits allowed."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that contains at least one digit?",
+          "testCases": [
+              {"input": "abc123", "output": true},
+              {"input": "abc", "output": false},
+              {"input": "123", "output": true}
+          ],
+          "hint": "At least one digit."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that contains at least one lowercase letter?",
+          "testCases": [
+              {"input": "abc", "output": true},
+              {"input": "ABC", "output": false},
+              {"input": "AbC", "output": true}
+          ],
+          "hint": "At least one lowercase letter."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that contains at least one uppercase letter?",
+          "testCases": [
+              {"input": "ABC", "output": true},
+              {"input": "abc", "output": false},
+              {"input": "AbC", "output": true}
+          ],
+          "hint": "At least one uppercase letter."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that contains no whitespace characters?",
+          "testCases": [
+              {"input": "abc123", "output": true},
+              {"input": "abc 123", "output": false},
+              {"input": "abc\t123", "output": false}
+          ],
+          "hint": "No spaces, tabs, or newlines."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that contains at least one whitespace character?",
+          "testCases": [
+              {"input": "abc 123", "output": true},
+              {"input": "abc123", "output": false},
+              {"input": "abc\t123", "output": true}
+          ],
+          "hint": "Spaces, tabs, or newlines."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that contains exactly three vowels?",
+          "testCases": [
+              {"input": "aei", "output": true},
+              {"input": "aeio", "output": false},
+              {"input": "abcde", "output": true}
+          ],
+          "hint": "Exactly three vowels (a, e, i, o, u)."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that contains no vowels?",
+          "testCases": [
+              {"input": "bcdfg", "output": true},
+              {"input": "abc", "output": false},
+              {"input": "xyz", "output": true}
+          ],
+          "hint": "No vowels (a, e, i, o, u)."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that contains exactly five consonants?",
+          "testCases": [
+              {"input": "bcdfg", "output": true},
+              {"input": "bcdfgh", "output": false},
+              {"input": "abcdfg", "output": true}
+          ],
+          "hint": "Exactly five consonants."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that starts with a capital letter?",
+          "testCases": [
+              {"input": "Hello", "output": true},
+              {"input": "hello", "output": false},
+              {"input": "HELLO", "output": true}
+          ],
+          "hint": "First character is uppercase."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that ends with a punctuation mark?",
+          "testCases": [
+              {"input": "Hello!", "output": true},
+              {"input": "Hello", "output": false},
+              {"input": "Hello?", "output": true}
+          ],
+          "hint": "Ends with ., !, ?, etc."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that is a valid JSON key?",
+          "testCases": [
+              {"input": "\"key\"", "output": true},
+              {"input": "key", "output": false},
+              {"input": "\"key\":", "output": false}
+          ],
+          "hint": "Keys in JSON are strings in double quotes."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that contains only hexadecimal digits?",
+          "testCases": [
+              {"input": "1A2B3C", "output": true},
+              {"input": "123456", "output": true},
+              {"input": "123Z56", "output": false}
+          ],
+          "hint": "Hexadecimal digits are 0-9 and A-F."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that contains only binary digits?",
+          "testCases": [
+              {"input": "101010", "output": true},
+              {"input": "123456", "output": false},
+              {"input": "110011", "output": true}
+          ],
+          "hint": "Binary digits are 0 and 1."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that contains only octal digits?",
+          "testCases": [
+              {"input": "1234567", "output": true},
+              {"input": "1234568", "output": false},
+              {"input": "07654321", "output": true}
+          ],
+          "hint": "Octal digits are 0-7."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that contains only uppercase letters?",
+          "testCases": [
+              {"input": "HELLO", "output": true},
+              {"input": "Hello", "output": false},
+              {"input": "HELLO123", "output": false}
+          ],
+          "hint": "Uppercase letters only."
+      },
+      {
+          "category": "hard",
+          "question": "How to match a string that contains only lowercase letters?",
+          "testCases": [
+              {"input": "hello", "output": true},
+              {"input": "Hello", "output": false},
+              {"input": "hello123", "output": false}
+          ],
+          "hint": "Lowercase letters only."
+      }
+  ]
+} 
