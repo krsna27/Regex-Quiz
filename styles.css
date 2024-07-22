@@ -182,3 +182,29 @@ button:hover {
 #show-results:hover{
     transform: scale(1.1);
 }
+
+@media (max-width: 600px) {
+    #rules-container, #quiz-container, #results-container, #quiz-completed-container {
+        padding: 15px;
+    }
+
+    #rules-container h2 {
+        font-size: 1.25em;
+    }
+
+    #rules-container ul li {
+        font-size: 1em;
+    }
+
+    #question-text {
+        font-size: 1.25em;
+    }
+
+    button {
+        font-size: 0.875em;
+    }
+
+    #hint-button {
+        font-size: 1.25em;
+    }
+}

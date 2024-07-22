@@ -64,7 +64,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayQuestion() {
         if (currentQuestionIndex < selectedQuestions.length) {
             const currentQuestion = selectedQuestions[currentQuestionIndex];
-            questionNumber.textContent = `Question : ${currentQuestionIndex + 1}`;
+            questionNumber.textContent = `Question : 
+            ${currentQuestionIndex + 1}`;
             questionText.textContent = currentQuestion.question;
             answerInput.value = '';
             responseText.textContent = '';
